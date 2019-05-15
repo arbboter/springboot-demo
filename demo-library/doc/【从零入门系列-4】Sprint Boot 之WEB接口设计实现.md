@@ -5,7 +5,7 @@
 * [【从零入门系列-0】Sprint Boot 之 Hello World](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/Sprint%20Boot%20%E4%B9%8B%20Hello%20World.md)
 * [【从零入门系列-1】Sprint Boot 之 程序结构设计说明](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-1%E3%80%91Sprint%20Boot%20%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E.md)
 * [【从零入门系列-2】Sprint Boot 之 数据库实体类](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-2%E3%80%91Sprint%20Boot%20%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%AE%BE%E8%AE%A1.md)
-* [【从零入门系列-3】Sprint Boot 之 数据库操作类]([https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-3%E3%80%91Sprint%20Boot%20%E4%B9%8B%20%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C%E7%B1%BB.md](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/[从零入门系列-3]Sprint Boot 之 数据库操作类.md))
+* [【从零入门系列-3】Sprint Boot 之 数据库操作类](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-3%E3%80%91Sprint%20Boot%20%E4%B9%8B%20%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C%E7%B1%BB.md)
 
 ---
 

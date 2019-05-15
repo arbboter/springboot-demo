@@ -2,7 +2,7 @@
 
 ## 文章系列
 
-* [【从零入门系列】Sprint Boot 之 Hello World](https://segmentfault.com/a/1190000019137607)
+* [【从零入门系列-0】Sprint Boot 之 Hello World](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/Sprint%20Boot%20%E4%B9%8B%20Hello%20World.md)
 
 ---
 
@@ -64,3 +64,7 @@
 ## 结束语  
 
 本章预先提供了项目实际效果图以及项目的整体结构设计，后续文章会根据本篇章设计依次实现各个模块，请持续关注。
+
+
+
+[下一篇](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-2%E3%80%91Sprint%20Boot%20%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%AE%BE%E8%AE%A1.md)

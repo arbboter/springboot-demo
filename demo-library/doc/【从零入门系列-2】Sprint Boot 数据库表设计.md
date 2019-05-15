@@ -2,8 +2,8 @@
 
 ## 文章系列
 
-* [【从零入门系列-0】Sprint Boot 之 Hello World](https://segmentfault.com/a/1190000019137607)
-* [【从零入门系列-1】Sprint Boot 之 程序结构设计说明](https://segmentfault.com/a/1190000019165644)
+* [【从零入门系列-0】Sprint Boot 之 Hello World](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/Sprint%20Boot%20%E4%B9%8B%20Hello%20World.md)
+* [【从零入门系列-1】Sprint Boot 之 程序结构设计说明](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-1%E3%80%91Sprint%20Boot%20%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E.md)
 
 ---
 
@@ -23,7 +23,7 @@ SpringBoot数据库的持久层框架主要分为两种架构模式，即以`JDB
 
 
 
-项目开始前，先按上一篇文章[【从零入门系列-1】Sprint Boot 之 程序结构设计说明](https://segmentfault.com/a/1190000019165644)后台程序结构建立相对应的目录：
+项目开始前，先按上一篇文章[【从零入门系列-1】Sprint Boot 之 程序结构设计说明](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-1%E3%80%91Sprint%20Boot%20%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E.md)后台程序结构建立相对应的目录：
 
 ```
 控制层：前端路由和后端处理关系处理，目录：Controller
@@ -231,8 +231,8 @@ SpringBoot数据库的持久层框架主要分为两种架构模式，即以`JDB
 
 ## 结束语
 
-本章内容记录了数据库实体类的简单的实现方式，并通过`application.properties`配置`JPA`的数据库配置项，使得程序运行后能自动关联并操作数据库表。
+本章内容记录了数据库实体类的简单的实现方式，并通过`application.properties`配置`JPA`的数据库配置项，使得程序运行后能自动关联并操作数据库表。下一章将介绍对数据库的增删改查（CRUD）操作相关内容，请继续关注。
 
 
 
-下一章将介绍对数据库的增删改查（CRUD）操作相关内容，请继续关注。
+[下一篇](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-3%E3%80%91Sprint%20Boot%20%E4%B9%8B%20%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C%E7%B1%BB.md)

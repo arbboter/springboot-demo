@@ -139,10 +139,50 @@ public class DemoLibraryApplicationTests {
                     .contentType(MediaType.APPLICATION_JSON_UTF8))
                     .andExpect(MockMvcResultMatchers.status().isOk())
                     .andReturn();
-            System.out.println("WEB测试返回:" + urlApi + "]:" + mvcResult.getResponse().getContentAsString());
+            System.out.println("WEB测试返回[" + urlApi + "]:" + mvcResult.getResponse().getContentAsString());
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void webBookEdit() throws Exception {
+        String url = "/library/edit/2";
+        // 只修改名字
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.post(url)
+                .param("name", "webBookEdit1")
+                .contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn();
+        System.out.println("1-WEB测试返回[" + url + "]:" + mvcResult.getResponse().getContentAsString());
+
+        // 修改名字和作者
+        mvcResult = mockMvc.perform(MockMvcRequestBuilders.post(url)
+                .param("name", "webBookEdit2")
+                .param("author", "webBookEdit2")
+                .contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn();
+        System.out.println("2-WEB测试返回[" + url + "]:" + mvcResult.getResponse().getContentAsString());
+    }
+
+    @Test
+    public void webSearch() throws Exception{
+        String url = "/library/search";
+        // 1-无条件
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.post(url)
+                .contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn();
+        System.out.println("1-无条件-WEB测试返回[" + url + "]:" + mvcResult.getResponse().getContentAsString());
+
+        // 2-根据作者名查询
+        mvcResult = mockMvc.perform(MockMvcRequestBuilders.post(url)
+                .param("author", "作者_3")
+                .contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn();
+        System.out.println("2-根据作者名(作者_3)查询-WEB测试返回[" + url + "]:" + mvcResult.getResponse().getContentAsString());
     }
 }

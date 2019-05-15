@@ -38,7 +38,7 @@ public class BookController {
         book.setImage(image);
         bookJpaRepository.save(book);
         rsp.put("data", book);
-        rsp.put("code", "0");
+        rsp.put("code", 0);
         rsp.put("info", "成功");
         return rsp;
     }
@@ -53,10 +53,11 @@ public class BookController {
         Map<String, Object> rsp = new HashMap<>();
         Optional<Book> book = bookJpaRepository.findById(id);
         if(!book.isPresent()) {
-            rsp.put("code", "1001");
+            rsp.put("code", 1001);
             rsp.put("info", "书籍ID[" + id + "]不存在");
         }else {
-            rsp.put("code", "0");
+            bookJpaRepository.deleteById(id);
+            rsp.put("code", 0);
             rsp.put("info", "书籍ID[" + id + "]删除成功");
             rsp.put("data", book);
         }
@@ -74,7 +75,7 @@ public class BookController {
         Map<String, Object> rsp = new HashMap<>();
         Optional<Book> book = bookJpaRepository.findById(id);
         if(!book.isPresent()) {
-            rsp.put("code", "1001");
+            rsp.put("code", 1001);
             rsp.put("info", "书籍ID[" + id + "]不存在");
         }else {
             Book bookUpd = book.get();
@@ -87,7 +88,7 @@ public class BookController {
             if(request.getParameter("image") != null){
                 bookUpd.setImage(request.getParameter("image"));
             }
-            rsp.put("code", "0");
+            rsp.put("code", 0);
             rsp.put("info", "书籍ID[" + id + "]更新成功");
             rsp.put("data", bookUpd);
         }
@@ -104,16 +105,21 @@ public class BookController {
         Map<String, Object> rsp = new HashMap<>();
         Optional<Book> book = bookJpaRepository.findById(id);
         if(!book.isPresent()) {
-            rsp.put("code", "1001");
+            rsp.put("code", 1001);
             rsp.put("info", "书籍ID[" + id + "]不存在");
         }else {
-            rsp.put("code", "0");
+            rsp.put("code", 0);
             rsp.put("info", "成功");
             rsp.put("data", book);
         }
         return rsp;
     }
 
+    /**
+     * 搜索查询接口
+     * @param request
+     * @return
+     */
     @PostMapping("/search")
     public Map<String, Object> search(HttpServletRequest request){
         Map<String, String> map = new HashMap<>();
@@ -121,7 +127,7 @@ public class BookController {
         Page<Book> books = bookService.search(map);
 
         Map<String, Object> rsp = new HashMap<>();
-        rsp.put("code", "0");
+        rsp.put("code", 0);
         rsp.put("info", "成功");
         rsp.put("rows", books.getContent());
         rsp.put("total", books.getTotalElements());

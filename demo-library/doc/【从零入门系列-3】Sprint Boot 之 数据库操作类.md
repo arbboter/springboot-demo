@@ -89,7 +89,7 @@ public class DemoLibraryApplicationTests {
 
 * 测试结果
 
-![1557817269112](C:\Users\Tony\AppData\Roaming\Typora\typora-user-images\1557817269112.png)
+![1557817269112](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190514-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/1557817269112.png)
 通过测试结果我们可以看到，程序已经能够对表数据进行增删改查，且我们通过删除SQL可以观察到，获取生成记录ID的SQL语句为:
 
 ```sql

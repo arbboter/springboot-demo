@@ -1,11 +1,11 @@
-# 【从零入门系列-4】Sprint Boot 之 WEB接口设计实现
+# 【从零入门系列-4】Spring Boot 之 WEB接口设计实现
 
 ## 文章系列
 
-* [【从零入门系列-0】Sprint Boot 之 Hello World](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/Sprint%20Boot%20%E4%B9%8B%20Hello%20World.md)
-* [【从零入门系列-1】Sprint Boot 之 程序结构设计说明](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-1%E3%80%91Sprint%20Boot%20%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E.md)
-* [【从零入门系列-2】Sprint Boot 之 数据库实体类](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-2%E3%80%91Sprint%20Boot%20%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%AE%BE%E8%AE%A1.md)
-* [【从零入门系列-3】Sprint Boot 之 数据库操作类](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-3%E3%80%91Sprint%20Boot%20%E4%B9%8B%20%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C%E7%B1%BB.md)
+* [【从零入门系列-0】Spring Boot 之 Hello World](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/Spring%20Boot%20%E4%B9%8B%20Hello%20World.md)
+* [【从零入门系列-1】Spring Boot 之 程序结构设计说明](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-1%E3%80%91Spring%20Boot%20%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E.md)
+* [【从零入门系列-2】Spring Boot 之 数据库实体类](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-2%E3%80%91Spring%20Boot%20%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%AE%BE%E8%AE%A1.md)
+* [【从零入门系列-3】Spring Boot 之 数据库操作类](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-3%E3%80%91Spring%20Boot%20%E4%B9%8B%20%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C%E7%B1%BB.md)
 
 ---
 
@@ -118,7 +118,7 @@ public Map<String, Object> save(@RequestParam String name, @RequestParam String 
 
    执行结果：
 
-   ![1557907574221](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190515-WEB接口设计实现/1557907574221.png)
+   ![1557907574221](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190515-WEB接口设计实现/1557907574221.png)
 
    
 
@@ -157,10 +157,10 @@ public Map<String, Object> save(@RequestParam String name, @RequestParam String 
 
    使用浏览器测试结果如下：
 
-   ![1557907999084](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190515-WEB接口设计实现/1557907999084.png)
+   ![1557907999084](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190515-WEB接口设计实现/1557907999084.png)
    删除不存在的书籍时
 
-   ![1557908059948](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190515-WEB接口设计实现/1557908059948.png)
+   ![1557908059948](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190515-WEB接口设计实现/1557908059948.png)
    正常删除数据
 
    
@@ -292,7 +292,7 @@ public Map<String, Object> findById(@PathVariable("id") Integer id){
 
 测试执行结果如下：
 
-![1557909406789](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190515-WEB接口设计实现/1557909406789.png)
+![1557909406789](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190515-WEB接口设计实现/1557909406789.png)
 
 
 

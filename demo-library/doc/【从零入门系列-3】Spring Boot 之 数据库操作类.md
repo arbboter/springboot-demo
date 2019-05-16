@@ -1,12 +1,12 @@
-# 【从零入门系列-3】Sprint Boot 之 数据库操作
+# 【从零入门系列-3】Spring Boot 之 数据库操作
 
 ## 文章系列
 
-* [【从零入门系列-0】Sprint Boot 之 Hello World](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/Sprint%20Boot%20%E4%B9%8B%20Hello%20World.md)
+* [【从零入门系列-0】Spring Boot 之 Hello World](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/Spring%20Boot%20%E4%B9%8B%20Hello%20World.md)
 
-* [【从零入门系列-1】Sprint Boot 之 程序结构设计说明](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-1%E3%80%91Sprint%20Boot%20%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E.md)
+* [【从零入门系列-1】Spring Boot 之 程序结构设计说明](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-1%E3%80%91Spring%20Boot%20%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E.md)
 
-* [【从零入门系列-2】Sprint Boot 之 数据库实体类](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-2%E3%80%91Sprint%20Boot%20%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%AE%BE%E8%AE%A1.md)
+* [【从零入门系列-2】Spring Boot 之 数据库实体类](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-2%E3%80%91Spring%20Boot%20%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%AE%BE%E8%AE%A1.md)
 
 ---
 
@@ -89,7 +89,7 @@ public class DemoLibraryApplicationTests {
 
 * 测试结果
 
-![1557817269112](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190514-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/1557817269112.png)
+![1557817269112](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190514-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/1557817269112.png)
 通过测试结果我们可以看到，程序已经能够对表数据进行增删改查，且我们通过删除SQL可以观察到，获取生成记录ID的SQL语句为:
 
 ```sql

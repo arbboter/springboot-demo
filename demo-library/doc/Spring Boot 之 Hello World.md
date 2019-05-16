@@ -1,4 +1,4 @@
-# 【从零入门系列-0】Sprint Boot 之 Hello World
+# 【从零入门系列-0】Spring Boot 之 Hello World
 
 ## 环境准备
 
@@ -17,10 +17,10 @@
 ## 创建项目
 
 1.打开`FIle->New->Project...`，选择`Spring Initializr`，然后选择`next`配置项目属性：
-![1557466868361](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190510-HelloWorld/1557466868361.png)
+![1557466868361](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190510-HelloWorld/1557466868361.png)
 
 2.设置项目组织及名称
-![1557467025015](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190510-HelloWorld/1557467025015.png)
+![1557467025015](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190510-HelloWorld/1557467025015.png)
 
 3.设置依赖
 
@@ -31,10 +31,10 @@
    * SQL：JPA（数据库的CRUD操作），SQL Server（本示例使用的数据库为Sql Server依赖)
 
 配置为：
-![1557467447980](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190510-HelloWorld/1557467447980.png)
+![1557467447980](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190510-HelloWorld/1557467447980.png)
 
 4.然后后续的直接按`Next`到最后的`Finish`完成项目创建，项目创建完后，会自动下载依赖项
-![1557468114996](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190510-HelloWorld/1557468114996.png)
+![1557468114996](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190510-HelloWorld/1557468114996.png)
 
 ---
 ## 项目结构说明
@@ -66,7 +66,7 @@
 ## HelloWorld
 
 * 为保证简单，第一步实现`Hello，World`，让项目跑起来，编辑项目生成的`main`文件即可：
-![1557469632884](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190510-HelloWorld/1557469632884.png)
+![1557469632884](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190510-HelloWorld/1557469632884.png)
 
   代码：
 
@@ -102,10 +102,10 @@
   ```
 
 * 运行程序，点击`main`函数左侧的绿色三角形，选择运行即可，或者按快捷键`Ctrl+Shift+F10`
-![1557469977409](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190510-HelloWorld/1557469977409.png)
+![1557469977409](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190510-HelloWorld/1557469977409.png)
 
   发现程序运行后退出，查看运行输出以排查问题：
-  ![1557470151195](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190510-HelloWorld/1557470151195.png)
+  ![1557470151195](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190510-HelloWorld/1557470151195.png)
   
   因为在新建项目时选择了`JPA`和`Sql Server`依赖，导致项目启动时自动去连接数据库，但是本项目又没有配置数据库连接信息，所以出现问题，有两个方案解决该问题：
   
@@ -121,12 +121,12 @@
     ```
   
   重新运行项目后，发现此时项目作为服务器程序正常运行
-  ![1557470503145](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190510-HelloWorld/1557470503145.png)
+  ![1557470503145](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190510-HelloWorld/1557470503145.png)
   
   可以查看到程序运行正常运行后，监听的端口号为`8080`，且也可从运行信息中找到连接数据库相关输出。
   
 * 访问网页`http://localhost:8080`，验证程序结果
-  ![1557470671225](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190510-HelloWorld/1557470671225.png)
+  ![1557470671225](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190510-HelloWorld/1557470671225.png)
   到这里整个示例已经跑起来了，有血有肉的框架已经准备好，后续在此基础上继续集成即可。
 ---
 ## 结束语
@@ -135,5 +135,5 @@ Spring Boot 非常智能化，为开发者提供大量的默认配置细节，�
 
 
 
-[下一篇](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-1%E3%80%91Sprint%20Boot%20%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E.md)
+[下一篇](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-1%E3%80%91Spring%20Boot%20%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E.md)
 

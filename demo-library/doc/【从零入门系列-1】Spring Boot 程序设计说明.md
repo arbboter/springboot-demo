@@ -1,8 +1,8 @@
-# 【从零入门系列-1】Sprint Boot 程序结构设计
+# 【从零入门系列-1】Spring Boot 程序结构设计
 
 ## 文章系列
 
-* [【从零入门系列-0】Sprint Boot 之 Hello World](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/Sprint%20Boot%20%E4%B9%8B%20Hello%20World.md)
+* [【从零入门系列-0】Spring Boot 之 Hello World](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/Spring%20Boot%20%E4%B9%8B%20Hello%20World.md)
 
 ---
 
@@ -10,27 +10,27 @@
 
 * 页面展示
 
-  ![1557733235595](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190513-程序结构设计说明/1557733235595.png)
+  ![1557733235595](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190513-程序结构设计说明/1557733235595.png)
 
 * 增
 
-  ![1557733316590](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190513-程序结构设计说明/1557733316590.png)
+  ![1557733316590](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190513-程序结构设计说明/1557733316590.png)
 
 * 删
 
-  ![1557733470698](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190513-程序结构设计说明/1557733470698.png)
+  ![1557733470698](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190513-程序结构设计说明/1557733470698.png)
 
 * 改
 
-  ![1557733441965](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190513-程序结构设计说明/1557733441965.png)
+  ![1557733441965](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190513-程序结构设计说明/1557733441965.png)
 
 * 查
 
-  ![1557733387960](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190513-程序结构设计说明/1557733387960.png)
+  ![1557733387960](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190513-程序结构设计说明/1557733387960.png)
 
 * 搜索
 
-![1557733526730](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190513-程序结构设计说明/1557733526730.png)
+![1557733526730](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190513-程序结构设计说明/1557733526730.png)
 
 
 
@@ -51,7 +51,7 @@
         3-数据库
             Book表：名字，作者，封面
 
-![1557736062821](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SprintBoot/20190513-程序结构设计说明/1557736062821.png)
+![1557736062821](https://raw.githubusercontent.com/arbboter/resource/master/segmentfault/image/SpringBoot/20190513-程序结构设计说明/1557736062821.png)
 
 * 说明
 
@@ -67,4 +67,4 @@
 
 
 
-[下一篇](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-2%E3%80%91Sprint%20Boot%20%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%AE%BE%E8%AE%A1.md)
+[下一篇](https://github.com/arbboter/springboot-demo/blob/master/demo-library/doc/%E3%80%90%E4%BB%8E%E9%9B%B6%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97-2%E3%80%91Spring%20Boot%20%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%AE%BE%E8%AE%A1.md)

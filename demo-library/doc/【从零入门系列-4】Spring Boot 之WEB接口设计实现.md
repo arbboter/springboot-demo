@@ -194,6 +194,7 @@ public Map<String, Object> updateById(@PathVariable("id") Integer id, HttpServle
         if(request.getParameter("image") != null){
             bookUpd.setImage(request.getParameter("image"));
         }
+        bookJpaRepository.save(bookUpd);
         rsp.put("code", 0);
         rsp.put("info", "书籍ID[" + id + "]更新成功");
         rsp.put("data", bookUpd);

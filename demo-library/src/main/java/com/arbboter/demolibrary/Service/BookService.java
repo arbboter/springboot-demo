@@ -37,7 +37,7 @@ public class BookService {
                 List<Predicate> predicate = new ArrayList<>();
 
                 // 根据支持参数列表获取查询参数
-                String matchMode = para.getOrDefault("matchMode", "AND");
+                String matchMode = para.getOrDefault("matchMode", "and");
                 List<String> bookFields =  Arrays.asList("id", "name", "author", "image");
                 for (String p : bookFields){
                     String buf = para.get(p);
@@ -57,7 +57,7 @@ public class BookService {
         // 分页排序
         Integer pageNumber = para.get("pageNumber") == null ? 0:Integer.valueOf(para.get("pageNumber"));
         Integer pageSize = para.get("pageSize") == null ? 10:Integer.valueOf(para.get("pageSize"));
-        Sort.Direction sortDir = para.getOrDefault("sortDir", "DESC") == "DESC" ? Sort.Direction.DESC : Sort.Direction.ASC;
+        Sort.Direction sortDir = para.getOrDefault("sortDir", "desc") == "desc" ? Sort.Direction.DESC : Sort.Direction.ASC;
         String ordName = para.getOrDefault("ordName", "id");
         Pageable pageable = PageRequest.of(pageNumber, pageSize, sortDir, ordName);
 

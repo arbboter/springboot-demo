@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>图书馆</title>
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap-table/1.14.2/bootstrap-table.css" rel="stylesheet">
+</head>
+<body>
+    <div class="panel panel-default">
+        <!-- 模态新增框 -->
+        <div class="modal fade" id="modeAdd" tabindex="-1" role="dialog" aria-labelledby="modeAddTitle">
+            <div class="tile modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times</button>
+                        <h3 class="modal-title" id="modeAddTitle">添加书籍</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formAdd" method="post">
+                            <div class="form-group row">
+                                <label class="control-label col-md-3">书名</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" id="add_name" type="text" placeholder="请输入书籍名称" name="name" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-md-3">作者</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" id="add_author" type="text" placeholder="请输入作者名称" name="author" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-md-3">封面</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" id="add_image" type="text" placeholder="请输入封面地址" name="image" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="onBtnAdd()">添加书籍</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 模态编辑框 -->
+        <div class="modal fade" id="modeEdit" tabindex="-1" role="dialog" aria-labelledby="modeEditTitle">
+            <div class="tile modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times</button>
+                        <h3 class="modal-title" id="modeEditTitle">编辑书籍信息</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formEdit" method="post">
+                            <div class="form-group row">
+                                <label class="control-label col-md-3">书ID</label>
+                                <div class="col-md-8">
+                                    <input  class="form-control" id="edit_id" type="text" placeholder="请输入书籍ID" name="id" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-md-3">书名</label>
+                                <div class="col-md-8">
+                                    <input  class="form-control" id="edit_name" type="text" placeholder="请输入书籍名称" name="name" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-md-3">作者</label>
+                                <div class="col-md-8">
+                                    <input  class="form-control" id="edit_author" type="text" placeholder="请输入作者名称" name="author" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-md-3">封面</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" id="edit_image" type="text" placeholder="请输入封面地址" name="image" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="onBtnEdit()">确定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 模态查询框 -->
+        <div class="modal fade" id="modeView" tabindex="-1" role="dialog" aria-labelledby="modeViewTitle">
+            <div class="tile modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times</button>
+                        <h3 class="modal-title" id="modeViewTitle">查看书籍信息</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formView" method="post">
+                            <div class="form-group row">
+                                <label class="control-label col-md-2">书ID</label>
+                                <div class="col-md-10">
+                                    <input  class="form-control" id="view_id" type="text" placeholder="请输入书籍ID" name="id" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-md-2">书名</label>
+                                <div class="col-md-10">
+                                    <input  class="form-control" id="view_name" type="text" placeholder="请输入书籍名称" name="name" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-md-2">作者</label>
+                                <div class="col-md-10">
+                                    <input  class="form-control" id="view_author" type="text" placeholder="请输入作者名称" name="author" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-md-2">封面</label>
+                                <div class="col-md-10">
+                                    <input class="form-control" id="view_image" type="text" placeholder="请输入封面地址" name="image" readonly>
+                                    <img class="form-control" id="view_image_show" alt="图片显示失败" src="" style="width: auto; height: auto; max-width: 80%; max-height: 80%;"/>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 查询面板 -->
+        <div class="panel panel-default">
+            <div class="panel-heading">查询条件</div>
+            <div class="panel-body">
+                <form id="formSearch" class="form-horizontal" method="get">
+                    <div class="form-group" style="margin-top:15px">
+                        <div class="col-sm-3">
+                            <label class="control-label col-sm-4" for="txt_search_name">书名</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="name" id="txt_search_name">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label class="control-label col-sm-4" for="txt_search_id" valign="center">书ID</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="id"  id="txt_search_id">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label class="control-label col-sm-4" for="txt_author" valign="center">作者</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="author"  id="txt_author">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <button class="btn btn-round btn-primary" type="button" id="btn_query" onclick="onTableSearch()">查询</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- 表工具栏 -->
+        <div id="toolbar" class="btn-group">
+            <button id="btn_add" type="button" class="btn btn-default" data-toggle="modal" data-target="#modeAdd">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+            </button>
+        </div>
+
+        <!-- 表结构 -->
+        <div class="panel panel-default">
+            <table id="book_table" >
+                <!-- js实现表结构 -->
+            </table>
+        </div>
+    </div>
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- bootstrap-table -->
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.14.2/bootstrap-table.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.14.2/locale/bootstrap-table-zh-CN.js"></script>
+
+    <!--两种方法引用JS文件-->
+    <!--1.原生引用-->
+    <!-- <script src="/js/book.js"></script> -->
+    <!--2.thymeleaf模版引用-->
+    <script th:src="@{/js/comm.js}"></script>
+    <script th:src="@{/js/index.js}"></script>
+</body>
+</html>

@@ -7,6 +7,7 @@ import com.arbboter.demolibrary.Util.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -21,6 +22,16 @@ public class BookController {
 
     @Autowired
     private BookService bookService;
+
+    /**
+     * 图书管理页
+     * @return 返回图书管理页面内容
+     */
+    @RequestMapping(value = "")
+    public ModelAndView index(){
+        return new ModelAndView("index");
+    }
+
 
     /**
      * 新增书籍
@@ -88,6 +99,7 @@ public class BookController {
             if(request.getParameter("image") != null){
                 bookUpd.setImage(request.getParameter("image"));
             }
+            bookJpaRepository.save(bookUpd);
             rsp.put("code", 0);
             rsp.put("info", "书籍ID[" + id + "]更新成功");
             rsp.put("data", bookUpd);

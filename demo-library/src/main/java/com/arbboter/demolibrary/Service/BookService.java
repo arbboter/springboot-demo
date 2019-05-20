@@ -42,7 +42,7 @@ public class BookService {
                 for (String p : bookFields){
                     String buf = para.get(p);
                     if(buf != null){
-                        if(matchMode == "LIKE") {
+                        if(matchMode.equals("like")) {
                             predicate.add(cb.like(root.get(p).as(String.class), "%" + buf + "%"));
                         } else {
                             predicate.add(cb.equal(root.get(p).as(String.class), buf));
@@ -57,7 +57,7 @@ public class BookService {
         // 分页排序
         Integer pageNumber = para.get("pageNumber") == null ? 0:Integer.valueOf(para.get("pageNumber"));
         Integer pageSize = para.get("pageSize") == null ? 10:Integer.valueOf(para.get("pageSize"));
-        Sort.Direction sortDir = para.getOrDefault("sortDir", "desc") == "desc" ? Sort.Direction.DESC : Sort.Direction.ASC;
+        Sort.Direction sortDir = para.getOrDefault("sortDir", "desc").equals("desc") ? Sort.Direction.DESC : Sort.Direction.ASC;
         String ordName = para.getOrDefault("ordName", "id");
         Pageable pageable = PageRequest.of(pageNumber, pageSize, sortDir, ordName);
 

@@ -35,6 +35,10 @@ function InitMainTable () {
             param["sortDir"] = params.order;
             // 排序字段
             param["ordName"] = params.sort;
+            // 模糊查询
+            if($('#id_switch_like').prop('checked')){
+                param["matchMode"] = 'like';
+            }
             return param;
         },
         idField: "id",                       // 指定主键列
